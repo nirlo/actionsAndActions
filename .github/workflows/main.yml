@@ -3,7 +3,8 @@
 name: nirlo-workflow
 
 on:
-  push: [ master ]
+  push: 
+    branches: [ master ]
 
 jobs:
   test:
