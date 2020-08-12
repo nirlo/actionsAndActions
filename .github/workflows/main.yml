@@ -13,6 +13,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Tell the user what is happening
-        run: echo "The first step in the process, running a simple "The first step in the process, running a simple echo"
-
- 
+        run: echo The first step in the process
