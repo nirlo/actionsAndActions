@@ -1,0 +1,19 @@
+# This is a simple basic workflow that you can create on your own
+
+name: nirlo-workflow
+
+on:
+  push: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Tell the user what is happening
+        run: echo "The first step in the process, running a simple "The first step in the process, running a simple echo"
+      
+      - name: Run a Script within my own repo
+        run: ./run.sh
+ 
