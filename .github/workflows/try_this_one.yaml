@@ -12,7 +12,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: Greeting Nirlo 
-        uses: ./actions/greet.yaml
+        uses: ./actions/
         id: hello
         with:
           who-to-greet: 'Nirlo'
