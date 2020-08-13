@@ -6,7 +6,7 @@ on:
 
 jobs:
   greet_nirlo_job:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     name: A job to say hello
     steps:
       - name: checkout
