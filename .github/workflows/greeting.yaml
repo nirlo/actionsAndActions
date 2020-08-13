@@ -18,3 +18,16 @@ jobs:
           who-to-greet: 'Nirlo'
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+  greet_js:
+    runs-on: ubuntu-latest
+    name: A job to say hello js
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Hello js 
+        uses: ./.github/actions/js-greet
+        id: hello
+        with:
+          who-to-greet: "Nirlo"
+      - name: Get the Output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
