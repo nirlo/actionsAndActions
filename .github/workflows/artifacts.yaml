@@ -1,0 +1,29 @@
+name: artifacts
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  first:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - shell: bash
+        run: echo "Goodbye world, I will not exist on this machine long" > testing.txt
+      - name: upload it!
+        uses: actions/upload-artifact@v2
+        with:
+          name: test
+          path: testing.txt
+  
+  second:
+    needs: first
+    runs-on: ubuntu-latest
+    steps:
+      - name: get the file
+        uses: actions/download-artifacts@v2
+        with:
+          name: test
+      - shell: bash
+        run: cat testing.txt
