@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get the file
-        uses: actions/download-artifacts@v2
+        uses: actions/download-artifact@v2
         with:
           name: test
       - shell: bash
